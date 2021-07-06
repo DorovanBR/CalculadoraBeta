@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="tema-light">
+    <head>
+        <title>Calculadora Beta</title>
+        
+        <!--Boostrap 5-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="./assets/css/estilo.css">
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/dorovania.js"></script>
+    </head>
+    <body class="tema-light">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-8 border mt-5 mb-5 pt-5 pb-5">
+
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h1>Temas</h1>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary btn-tema-light" name="btn-mudaTema" id="btn-mudaTema" data-tema-atual="tema-light" data-tema="tema-light">Light</button>
+                            <button type="button" class="btn btn-primary btn-tema-dark" name="btn-mudaTema" id="btn-mudaTema" data-tema-atual="tema-light" data-tema="tema-dark">Dark</button>
+                            <button type="button" class="btn btn-primary btn-tema-fofys" name="btn-mudaTema" id="btn-mudaTema" data-tema-atual="tema-light" data-tema="tema-fofys">Fofys</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 text-center">
+                        <div class="col-12">
+                            <h1>Calculadora Beta</h1>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-5">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-success tema-light w-100" name="btn-calculadoraOnOff" id="btn-calculadoraOnOff" data-status="on">Ligar</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-danger tema-light w-100" disabled name="btn-calculadoraOnOff" id="btn-calculadoraOnOff" data-status="off">Desligar</button>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-5" id="div-calculadoraVerso">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4>Data e Hora</h4>
+                                </div>
+                                <div class="col-12">
+                                    <span id="span-DataHora">02/07/2021 - 20:37:20</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4>Créditos</h4>
+                                </div>
+                                <div class="col-12">
+                                    <p>Desenvolvedor Fullstack <span>DorovanBR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-5" id="div-dorovania" style="display: none;">
+                        <div class="col-12">
+                            <h2>Dorovania</h2>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <img src="assets/images/dorovania.png" class="img-fluid dorovania tema-light" width="100px">
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary tema-light w-100" id="btn-iniciaDorovania" onclick="iniciaDorovania(14, false)"><i class="fa fa-bug"></i> Inicia Dorovania</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-success tema-light w-100" id="btn-escutaMensagem" onclick="escutaMensagem()"><i class="fa fa-microphone"></i> Falar Algo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="alert alert-info">Status</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="alert alert-primary">Mensagem</p>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-6">
+                                    <p class="alert alert-secondary" id="info-status"></p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="alert alert-secondary" id="info-mensagem"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-5" id="div-calculadoraCampos" style="display: none;">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="input-valor1" class="form-label">Valor 1</label>
+                                    <input type="number" class="form-control" disabled name="input-valor1" id="input-valor1" placeholder="Entre com o Valor 1">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <button type="button" class="btn btn-info w-100" disabled name="btn-funcaoMemoria-input-valor" id="btn-funcaoMemoria-input-valor" data-input="1" data-funcao="resultado">M=</button>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary tema-light w-100" disabled name="btn-funcaoCalculadora" id="btn-funcaoCalculadora" data-funcao="soma">+</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary tema-light w-100" disabled name="btn-funcaoCalculadora" id="btn-funcaoCalculadora" data-funcao="subtrai">-</button>
+                                </div>    
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary tema-light w-100" disabled name="btn-funcaoCalculadora" id="btn-funcaoCalculadora" data-funcao="dividi">/</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary tema-light w-100" disabled name="btn-funcaoCalculadora" id="btn-funcaoCalculadora" data-funcao="multiplica">*</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="input-valor1" class="form-label">Valor 2</label>
+                                    <input type="number" class="form-control" disabled name="input-valor2" id="input-valor2" placeholder="Entre com o Valor 2">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col"></div>
+                                <div class="col-8">
+                                    <button type="button" class="btn btn-info w-100" disabled name="btn-funcaoMemoria-input-valor" id="btn-funcaoMemoria-input-valor" data-input="2" data-funcao="resultado">M=</button>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-5" id="div-calculadoraBotoesMemoria" style="display: none;">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-warning tema-light w-100" disabled name="btn-funcaoMemoria" id="btn-funcaoMemoria" data-funcao="adiciona">M+</button>
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-warning tema-light w-100" disabled name="btn-funcaoMemoria" id="btn-funcaoMemoria" data-funcao="subtrai">M-</button>
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-warning tema-light w-100" disabled name="btn-funcaoMemoria" id="btn-funcaoMemoria" data-funcao="limpa">M0</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+
+                    <div class="row text-center mt-5" id="div-calculadoraMemoria" style="display: none;">
+                        <div class="col-12">
+                            <label for="input-memoria" class="form-label">Memoria</label>
+                            <input type="number" class="form-control" id="input-memoria" disabled name="input-memoria" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="row text-center mt-5" id="div-calculadoraResultado" style="display: none;">
+                        <div class="col-12">
+                            <label for="input-resultado" class="form-label">Resultado</label>
+                            <input type="number" class="form-control" id="input-resultado" disabled name="input-resultado" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </body>
+</html>

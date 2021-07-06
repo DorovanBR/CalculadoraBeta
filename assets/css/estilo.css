@@ -1,0 +1,159 @@
+/* Tema Dark */
+
+html.tema-dark, body.tema-dark{
+    background-color: #000;
+    color: #f0f6fd;
+}
+
+.btn-success.tema-dark{
+    color: #fff;
+    background-color: #39c51c;
+    border-color: #39c51c;
+}
+
+.btn-success:disabled.tema-dark, .btn-success.disabled.tema-dark{
+    color: #fff;
+    background-color: #206f10;
+    border-color: #206f10;
+}
+
+.btn-danger.tema-dark{
+    color: #fff;
+    background-color: #ff253a;
+    border-color: #ff253a;
+}
+
+.btn-danger:disabled.tema-dark, .btn-danger.disabled.tema-dark{
+    color: #fff;
+    background-color: #861b25;
+    border-color: #861b25;
+}
+
+.btn-warning.tema-dark{
+    color: #000;
+    background-color: #ffe814;
+    border-color: #ffe814;
+}
+
+.btn-warning:disabled.tema-dark, .btn-warning.disabled.tema-dark{
+    color: #000;
+    background-color: #bebd06;
+    border-color: #bebd06;
+}
+
+.btn-primary.tema-dark {
+    color: #fff;
+    background-color: #0d2ffd;
+    border-color: #0d2ffd;
+}
+
+.btn-primary:disabled.tema-dark, .btn-primary.disabled.tema-dark {
+    color: #fff;
+    background-color: #081776;
+    border-color: #081776;
+}
+
+.btn-info.tema-dark {
+    color: #000;
+    background-color: #51f9f6;
+    border-color: #51f9f6;
+}
+
+.btn-info:disabled.tema-dark, .btn-info.disabled.tema-dark {
+    color: #fff;
+    background-color: #41808d;
+    border-color: #41808d;
+}
+
+.dorovania.tema-dark{
+    filter: invert(1);
+}
+
+/* Tema Fofys */
+
+html.tema-fofys, body.tema-fofys{
+    background-color: #77004a;
+    color: #f0f6fd;
+}
+
+.btn-success.tema-fofys{
+    color: #fff;
+    background-color: #f045d7;
+    border-color: #f045d7;
+}
+
+.btn-success:disabled.tema-fofys, .btn-success.disabled.tema-fofys{
+    color: #fff;
+    background-color: #a43092;
+    border-color: #a43092;
+}
+
+.btn-danger.tema-fofys{
+    color: #fff;
+    background-color: #fb27f1;
+    border-color: #fb27f1;
+}
+
+.btn-danger:disabled.tema-fofys, .btn-danger.disabled.tema-fofys{
+    color: #fff;
+    background-color: #93198d;
+    border-color: #93198d;
+}
+
+.btn-warning.tema-fofys{
+    color: #000;
+    background-color: #ff8f18;
+    border-color: #ff8f18;
+}
+
+.btn-warning:disabled.tema-fofys, .btn-warning.disabled.tema-fofys{
+    color: #FFF;
+    background-color: #ac6214;
+    border-color: #ac6214;
+}
+
+.btn-primary.tema-fofys {
+    color: #fff;
+    background-color: #9713fb;
+    border-color: #9713fb;
+}
+
+.btn-primary:disabled.tema-fofys, .btn-primary.disabled.tema-fofys {
+    color: #fff;
+    background-color: #5d0f98;
+    border-color: #5d0f98;
+}
+
+.btn-info.tema-fofys {
+    color: #000;
+    background-color: #be64fa;
+    border-color: #be64fa;
+}
+
+.btn-info:disabled.tema-fofys, .btn-info.disabled.tema-fofys {
+    color: #fff;
+    background-color: #5b3176;
+    border-color: #5b3176;
+}
+
+.dorovania.tema-fofys{
+    filter: hue-rotate(73deg);
+}
+
+
+/* Botões de Tema */
+
+.btn-tema-light{
+    color: #000;
+    background-color: #FFF;
+}
+
+.btn-tema-dark{
+    color: #FFF;
+    background-color: #000;
+}
+
+.btn-tema-fofys{
+    color: #FFF;
+    background-color: #e20082;
+}
